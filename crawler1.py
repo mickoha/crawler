@@ -1,6 +1,5 @@
 import json
 import requests
-import datetime
 from selenium import webdriver
 from bs4 import BeautifulSoup as bs
 
@@ -13,7 +12,7 @@ def crawler():
         url = 'https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet?ob=6'
         if i > 1:
             url = 'https://www.jimms.fi/fi/Product/List/000-00P/komponentit--naytonohjaimet?p=' + str(i) +'&ob=6'
-        driver = webdriver.Chrome('/Program Files (x86)/chromedriver/chromedriver.exe', options=options)
+        driver = webdriver.Chrome('/path/to/driver', options=options)
         driver.get(url)
         elements = driver.find_elements_by_class_name('p_listTmpl1')
 
